@@ -1,5 +1,10 @@
 package interfaccia1;
 
+import part.Wallpaper;
+import part.QuadratoSpeciale;
+import part.Quadrato2;
+import part.Rettangolo;
+import part.Quadrato;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

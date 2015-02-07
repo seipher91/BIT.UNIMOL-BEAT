@@ -1,4 +1,4 @@
-package interfaccia1;
+package part;
 
 import java.awt.Graphics;
 import java.awt.Image;

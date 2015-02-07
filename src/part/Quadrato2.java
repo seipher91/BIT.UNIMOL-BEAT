@@ -1,4 +1,4 @@
-package interfaccia1;
+package part;
 
 import javax.swing.ImageIcon;
 
