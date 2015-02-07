@@ -19,7 +19,7 @@ public class Rettangolo {
     
     
     public Rettangolo(double pSpeed) {
-        this.rectangle = new ImageIcon(getClass().getResource("/interfaccia1/rectangle.png")).getImage();
+        this.rectangle = new ImageIcon(getClass().getResource("/immagini/rectangle.png")).getImage();
         this.x = 15;
         this.y = 600 - this.rectangle.getHeight(null);
         this.speed = pSpeed;

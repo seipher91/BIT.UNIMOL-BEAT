@@ -15,7 +15,7 @@ public class Quadrato {
     protected double speed;
     
     public Quadrato(double pSpeed) {
-        this.square = new ImageIcon(getClass().getResource("/interfaccia1/square.png")).getImage();
+        this.square = new ImageIcon(getClass().getResource("/immagini/square.png")).getImage();
         this.y = Math.random() * (600 - this.square.getHeight(null));
         this.x = 800 - this.square.getWidth(null);
         this.speed = pSpeed;

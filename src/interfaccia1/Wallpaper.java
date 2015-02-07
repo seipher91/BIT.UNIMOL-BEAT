@@ -14,7 +14,7 @@ public class Wallpaper {
     
     public Wallpaper() {
         
-        this.sfondo = new ImageIcon(getClass().getResource("/interfaccia1/sfondo.jpg")).getImage();
+        this.sfondo = new ImageIcon(getClass().getResource("/immagini/sfondo.jpg")).getImage();
     }
     
     public void draw(Graphics g) {

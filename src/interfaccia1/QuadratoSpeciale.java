@@ -17,7 +17,7 @@ public class QuadratoSpeciale extends Quadrato {
         super(pSpeed);
         //this.y = 70 + (Math.random() * 430);
         this.y = pY;
-        this.square = new ImageIcon(getClass().getResource("/interfaccia1/square2.png")).getImage();
+        this.square = new ImageIcon(getClass().getResource("/immagini/square2.png")).getImage();
         
         this.ySpeed = 4.00;
         

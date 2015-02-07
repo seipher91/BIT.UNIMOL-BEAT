@@ -12,7 +12,7 @@ public class Quadrato2 extends Quadrato {
 
     public Quadrato2(double pSpeed) {
         super(pSpeed);
-        this.square = new ImageIcon(getClass().getResource("/interfaccia1/quadrato3.png")).getImage();
+        this.square = new ImageIcon(getClass().getResource("/immagini/quadrato3.png")).getImage();
         this.ySpeed = 6.00;
     }
     
