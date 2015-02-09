@@ -14,6 +14,9 @@ public class KeyHandler extends KeyAdapter {
         if ((e.getKeyCode() == KeyEvent.VK_UP) || (e.getKeyCode() == KeyEvent.VK_DOWN)) {
             Instance.rectangle.stop();
         }
+        if ((e.getKeyCode() == KeyEvent.VK_W) || (e.getKeyCode() == KeyEvent.VK_S)) {
+            Instance.rectangle_opposite.stop();
+        }
     }
 
     @Override
@@ -22,6 +25,12 @@ public class KeyHandler extends KeyAdapter {
             Instance.rectangle.moveUp();
         } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
             Instance.rectangle.moveDown();
+        }
+        
+        if (e.getKeyCode() == KeyEvent.VK_W) {
+            Instance.rectangle_opposite.moveUp();
+        } else if (e.getKeyCode() == KeyEvent.VK_S) {
+            Instance.rectangle_opposite.moveDown();
         }
     }
 }

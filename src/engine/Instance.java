@@ -12,6 +12,8 @@ public class Instance {
     
     public static Rettangolo rectangle;
     
+    public static Rettangolo rectangle_opposite;
+    
     public static ArrayList<Quadrato> quadrato;
     
 }
