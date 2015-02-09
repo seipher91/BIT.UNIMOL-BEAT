@@ -35,7 +35,7 @@ public class Quadrato {
         else 
             this.x += this.speed;
         
-        if(this.x <= 0 - this.square.getWidth(null)){
+        if(this.x <= 0 - this.square.getWidth(null) || this.x >= 800){
             this.x = 800;
             this.y = (Math.random() * (600 - square.getHeight(null)));
             this.path = false;

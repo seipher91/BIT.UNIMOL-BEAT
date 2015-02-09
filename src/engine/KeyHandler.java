@@ -12,16 +12,16 @@ public class KeyHandler extends KeyAdapter {
     @Override
     public void keyReleased(KeyEvent e) {
         if ((e.getKeyCode() == KeyEvent.VK_UP) || (e.getKeyCode() == KeyEvent.VK_DOWN)) {
-            Istance.rectangle.stop();
+            Instance.rectangle.stop();
         }
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_UP) {
-            Istance.rectangle.moveUp();
+            Instance.rectangle.moveUp();
         } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            Istance.rectangle.moveDown();
+            Instance.rectangle.moveDown();
         }
     }
 }

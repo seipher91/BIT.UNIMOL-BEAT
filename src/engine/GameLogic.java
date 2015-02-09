@@ -22,14 +22,14 @@ public class GameLogic implements Runnable {
     private Thread thread;
     
     public GameLogic() {
-        Istance.rectangle = new Rettangolo(2.00);
-        Istance.square = new Quadrato(3.00);
+        Instance.rectangle = new Rettangolo(2.00);
+        Instance.square = new Quadrato(3.00);
     }
     
     public void isIntersecato() {
-        if(Istance.rectangle.getBody().intersects(Istance.square.getBody())){
-            System.out.println("Intersect!");
-            Istance.square.setReversePath(true);
+        if(Instance.rectangle.getBody().intersects(Instance.square.getBody())
+                || Instance.rectangle.getBody().contains(Instance.square.getBody())){
+            Instance.square.setReversePath(true);
         }
     }
 
@@ -37,8 +37,8 @@ public class GameLogic implements Runnable {
      * Cediamo a game logic la libertà di egstire l'aggiornamento degli elementi di gioco
      */
     public void update() {
-        Istance.rectangle.update();
-        Istance.square.update();
+        Instance.rectangle.update();
+        Instance.square.update();
     }
     
     /**
@@ -46,13 +46,16 @@ public class GameLogic implements Runnable {
      * @param g 
      */
     public void Draw(Graphics g) {
-        Istance.rectangle.draw(g);
-        Istance.square.draw(g);
+        Instance.rectangle.draw(g);
+        Instance.square.draw(g);
     }
     
     @Override
     public void run() {
         while (true) {
+            try { 
+                Thread.sleep(100);
+            } catch (InterruptedException ex) { }
             isIntersecato();
         }
     }
