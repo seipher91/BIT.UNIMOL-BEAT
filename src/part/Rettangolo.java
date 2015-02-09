@@ -42,11 +42,13 @@ public class Rettangolo {
     }
     
     public void moveUp(){
-        this.actualSpeed =  this.speed * -1;
+        if(this.y>0)
+            this.actualSpeed = this.speed * -1;
     }
     
     public void moveDown(){
-        this.actualSpeed =  this.speed;
+        if(this.y+this.heigth<600)
+            this.actualSpeed = this.speed;
     }
     
     public void stop(){

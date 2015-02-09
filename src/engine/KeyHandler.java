@@ -21,16 +21,23 @@ public class KeyHandler extends KeyAdapter {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_UP) {
-            Instance.rectangle.moveUp();
-        } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            Instance.rectangle.moveDown();
+        switch(e.getKeyCode()){
+            case KeyEvent.VK_UP:
+                Instance.rectangle.moveUp();
+                break;
+            case KeyEvent.VK_DOWN:
+                Instance.rectangle.moveDown();
+                break;
         }
+        
         if(Instance.gameLogicEnabled) {
-            if (e.getKeyCode() == KeyEvent.VK_W) {
-                Instance.rectangle_opposite.moveUp();
-            } else if (e.getKeyCode() == KeyEvent.VK_S) {
-                Instance.rectangle_opposite.moveDown();
+            switch(e.getKeyCode()){
+                case KeyEvent.VK_W:
+                    Instance.rectangle_opposite.moveUp();
+                    break;
+                case KeyEvent.VK_S:
+                    Instance.rectangle_opposite.moveDown();
+                    break;
             }
         }
     }
