@@ -23,19 +23,18 @@ public class GameLogic implements Runnable {
     
     public GameLogic() {
         Instance.rectangle = new Rettangolo(2.00);
-        Instance.square = new Quadrato(3.00);
-        Instance.quadrato = new ArrayList();
         
         for(int i=0; i<10; i++){
-            Instance.quadrato.size();
-            
+            Instance.quadrato.add(new Quadrato(3.00));
         }
     }
     
     public void isIntersecato() {
-        if(Instance.rectangle.getBody().intersects(Instance.square.getBody())
-                || Instance.rectangle.getBody().contains(Instance.square.getBody())){
-            Instance.square.setReversePath(true);
+        for(Quadrato q : Instance.quadrato){
+            if(Instance.rectangle.getBody().intersects(q.getBody())
+                || Instance.rectangle.getBody().contains(q.getBody())){
+                q.setReversePath(true);
+            }
         }
     }
 
@@ -44,7 +43,9 @@ public class GameLogic implements Runnable {
      */
     public void update() {
         Instance.rectangle.update();
-        Instance.square.update();
+        
+        for(Quadrato q : Instance.quadrato)
+            q.update();
     }
     
     /**
@@ -53,7 +54,9 @@ public class GameLogic implements Runnable {
      */
     public void Draw(Graphics g) {
         Instance.rectangle.draw(g);
-        Instance.square.draw(g);
+        
+        for(Quadrato q : Instance.quadrato)
+            q.draw(g);
     }
     
     @Override

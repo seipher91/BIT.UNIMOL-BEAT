@@ -1,5 +1,6 @@
 package engine;
 
+import java.util.ArrayList;
 import part.Quadrato;
 import part.Rettangolo;
 
@@ -10,6 +11,7 @@ import part.Rettangolo;
 public class Instance {
     
     public static Rettangolo rectangle;
-    public static Quadrato square;
+    
+    public static ArrayList<Quadrato> quadrato;
     
 }
