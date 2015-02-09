@@ -44,6 +44,7 @@ public class Quadrato {
                 this.x = 800;
                 this.y = (Math.random() * (600 - square.getHeight(null)));
                 this.path = false;
+                this.timer = (int)(Math.random() * 250);
             }
             this.Body = new Rectangle((int)this.x, (int)this.y, (int)this.width, (int)this.heigth );
         }

@@ -40,6 +40,7 @@ public class GameLogic implements Runnable {
             if(Instance.rectangle.getBody().intersects(q.getBody())
                 || Instance.rectangle.getBody().contains(q.getBody())){
                 q.setReversePath(true);
+                Instance.Punteggio += 30;
             }
         }
         if(Instance.gameLogicEnabled) {

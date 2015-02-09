@@ -1,6 +1,7 @@
 package interfaccia1;
 
 import engine.GameLogic;
+import engine.Instance;
 import engine.KeyHandler;
 import part.Wallpaper;
 import part.QuadratoSpeciale;
@@ -94,6 +95,7 @@ public class GestionePanel extends JPanel {
 
         super.paintComponent(g);
         this.sfondo.draw(g);
+        g.drawString("PUNTEGGIO!: "+Instance.Punteggio, 350, 20);
         //this.square.draw(g);
         //this.square2.draw(g);
         //this.squareNew.draw(g);

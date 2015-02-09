@@ -16,6 +16,8 @@ public class Instance {
     
     public static ArrayList<Quadrato> quadrato;
     
+    public static int Punteggio = 0;
+    
     public static boolean gameLogicEnabled = false;
     
 }
