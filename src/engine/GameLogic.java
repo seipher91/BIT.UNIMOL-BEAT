@@ -24,6 +24,12 @@ public class GameLogic implements Runnable {
     public GameLogic() {
         Instance.rectangle = new Rettangolo(2.00);
         Instance.square = new Quadrato(3.00);
+        Instance.quadrato = new ArrayList();
+        
+        for(int i=0; i<10; i++){
+            Instance.quadrato.size();
+            
+        }
     }
     
     public void isIntersecato() {
