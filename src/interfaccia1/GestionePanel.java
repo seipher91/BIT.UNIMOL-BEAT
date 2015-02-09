@@ -101,7 +101,6 @@ public class GestionePanel extends JPanel {
 
         @Override
         public void actionPerformed(ActionEvent ae) {
-
             update();
             repaint();
         }
@@ -124,7 +123,6 @@ public class GestionePanel extends JPanel {
                 rectangle.moveDown();
             }
         }
-
     }
-
+    
 }

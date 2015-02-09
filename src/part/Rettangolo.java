@@ -46,5 +46,5 @@ public class Rettangolo {
     public void stop(){
         this.actualSpeed = 0;
     }
-    
+
 }
