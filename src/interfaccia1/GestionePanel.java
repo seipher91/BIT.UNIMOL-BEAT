@@ -19,12 +19,12 @@ import javax.swing.Timer;
  *
  * @author VittorioBarile
  */
-public class SimplePanel extends JPanel {
+public class GestionePanel extends JPanel {
 
     private Timer gameTimer;
     private Quadrato square;
     private Quadrato square2;
-    //private QuadratoSpeciale squareSpecial;
+    private QuadratoSpeciale squareSpecial;
     private Quadrato2 squareNew;
     private Rettangolo rectangle;
     private Wallpaper sfondo;
@@ -33,7 +33,7 @@ public class SimplePanel extends JPanel {
     private LinkedList<QuadratoSpeciale> QSList;
     private int contatore;
 
-    public SimplePanel() {
+    public GestionePanel() {
 
         this.sfondo = new Wallpaper();
         this.square = new Quadrato(3.00);
@@ -41,7 +41,7 @@ public class SimplePanel extends JPanel {
         this.squareNew = new Quadrato2(6);
         this.rectangle = new Rettangolo(2.00);
         //this.squareSpecial = new QuadratoSpeciale(5.00);
-        //lsta
+        //lista
         this.QSList = new LinkedList<QuadratoSpeciale>();
         this.contatore = 0;
 

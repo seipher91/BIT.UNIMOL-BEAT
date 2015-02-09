@@ -4,14 +4,14 @@ package interfaccia1;
  *
  * @author VittorioBarile
  */
-public class Interfaccia1 {
+public class Main {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         
-        SimpleFrame frame = new SimpleFrame();
+        GestioneFrame frame = new GestioneFrame();
         
         frame.show();
         

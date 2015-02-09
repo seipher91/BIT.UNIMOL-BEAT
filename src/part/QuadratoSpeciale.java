@@ -1,5 +1,7 @@
 package part;
 
+import java.util.Iterator;
+import java.util.LinkedList;
 import javax.swing.ImageIcon;
 
 /**

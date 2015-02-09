@@ -7,10 +7,10 @@ import javax.swing.JFrame;
  *
  * @author VittorioBarile
  */
-public class SimpleFrame extends JFrame {
+public class GestioneFrame extends JFrame {
     
     
-    public SimpleFrame() {
+    public GestioneFrame() {
         
         setTitle("BIT.UNIMOL BEAT");
         setSize(800 , 600);
@@ -21,7 +21,7 @@ public class SimpleFrame extends JFrame {
         setVisible(true);
         
         
-        SimplePanel panel = new SimplePanel();
+        GestionePanel panel = new GestionePanel();
         Container contentPane = getContentPane();
        
         contentPane.add(panel);
