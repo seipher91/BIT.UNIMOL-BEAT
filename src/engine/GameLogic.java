@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import part.Quadrato;
+import part.Quadrato2;
 import part.Rettangolo;
 /**
  * Classe per la logica di gioco:
@@ -24,7 +25,7 @@ public class GameLogic implements Runnable {
     
     
     public GameLogic() {
-        Instance.rectangle = new Rettangolo(2.00);
+        Instance.rectangle = new Rettangolo(8.00);
         
         if(Instance.gameLogicEnabled)
             Instance.rectangle_opposite = new Rettangolo(2.00);
@@ -32,6 +33,11 @@ public class GameLogic implements Runnable {
         Instance.quadrato = new ArrayList<>();
         for(int i=0; i<10; i++){
             Instance.quadrato.add(new Quadrato(3.00));
+        }
+        
+        Instance.quadrato2 = new ArrayList<>();
+        for(int i=0; i<6; i++){
+            Instance.quadrato2.add(new Quadrato2(3.00));
         }
     }
     
@@ -51,6 +57,14 @@ public class GameLogic implements Runnable {
                 }
             }
         }
+        
+        for(Quadrato2 q : Instance.quadrato2){
+            if(Instance.rectangle.getBody().intersects(q.getBody())
+                || Instance.rectangle.getBody().contains(q.getBody())){
+                q.setReversePath(true);
+                Instance.Punteggio += 50;
+            }
+        }
     }
 
     /**
@@ -63,6 +77,9 @@ public class GameLogic implements Runnable {
             Instance.rectangle_opposite.update();
         
         for(Quadrato q : Instance.quadrato)
+            q.update();
+        
+        for(Quadrato2 q : Instance.quadrato2)
             q.update();
     }
     
@@ -77,6 +94,9 @@ public class GameLogic implements Runnable {
             Instance.rectangle_opposite.draw(g);
         
         for(Quadrato q : Instance.quadrato)
+            q.draw(g);
+        
+        for(Quadrato2 q : Instance.quadrato2)
             q.draw(g);
     }
     

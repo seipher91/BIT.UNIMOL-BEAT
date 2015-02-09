@@ -57,7 +57,7 @@ public class GestionePanel extends JPanel {
         this.addKeyListener(this.gestorePulsanti);
         this.gameTimer.start();
         
-        //Avviamo il thrad di logica
+        //Avviamo il thread di logica
         this.logic.start();
 
     }

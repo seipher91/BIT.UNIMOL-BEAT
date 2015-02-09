@@ -13,10 +13,10 @@ public class Quadrato {
     
     double x, y;
     Image square;
-    private Rectangle Body;
+    protected Rectangle Body;
     double width, heigth;
     double speed;
-    private Boolean path;
+    protected Boolean path;
     
     int timer;
     
