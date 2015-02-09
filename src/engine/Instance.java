@@ -16,4 +16,6 @@ public class Instance {
     
     public static ArrayList<Quadrato> quadrato;
     
+    public static boolean gameLogicEnabled = false;
+    
 }

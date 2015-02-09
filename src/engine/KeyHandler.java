@@ -26,11 +26,12 @@ public class KeyHandler extends KeyAdapter {
         } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
             Instance.rectangle.moveDown();
         }
-        
-        if (e.getKeyCode() == KeyEvent.VK_W) {
-            Instance.rectangle_opposite.moveUp();
-        } else if (e.getKeyCode() == KeyEvent.VK_S) {
-            Instance.rectangle_opposite.moveDown();
+        if(Instance.gameLogicEnabled) {
+            if (e.getKeyCode() == KeyEvent.VK_W) {
+                Instance.rectangle_opposite.moveUp();
+            } else if (e.getKeyCode() == KeyEvent.VK_S) {
+                Instance.rectangle_opposite.moveDown();
+            }
         }
     }
 }
