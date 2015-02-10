@@ -3,6 +3,7 @@ package engine;
 import java.util.ArrayList;
 import part.Quadrato;
 import part.Quadrato2;
+import part.QuadratoSpeciale;
 import part.Rettangolo;
 
 /**
@@ -18,6 +19,8 @@ public class Instance {
     public static ArrayList<Quadrato> quadrato;
     
     public static ArrayList<Quadrato2> quadrato2;
+    
+    public static ArrayList<QuadratoSpeciale> quadratoSpeciale;
     
     public static int Punteggio = 0;
     

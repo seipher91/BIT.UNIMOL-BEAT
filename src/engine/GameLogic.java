@@ -8,6 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import part.Quadrato;
 import part.Quadrato2;
+import part.QuadratoSpeciale;
 import part.Rettangolo;
 /**
  * Classe per la logica di gioco:
@@ -39,6 +40,12 @@ public class GameLogic implements Runnable {
         for(int i=0; i<6; i++){
             Instance.quadrato2.add(new Quadrato2(3.00));
         }
+        
+        Instance.quadratoSpeciale = new ArrayList<>();
+        for(int i=0; i<5; i++){
+            Instance.quadratoSpeciale.add(new QuadratoSpeciale(3.00, 3.00));
+        }
+        
     }
     
     public void isIntersecato() {
@@ -65,6 +72,14 @@ public class GameLogic implements Runnable {
                 Instance.Punteggio += 50;
             }
         }
+        
+        for(QuadratoSpeciale q : Instance.quadratoSpeciale){
+            if(Instance.rectangle.getBody().intersects(q.getBody())
+                || Instance.rectangle.getBody().contains(q.getBody())){
+                q.setReversePath(true);
+                Instance.Punteggio += 20;
+            }
+        }
     }
 
     /**
@@ -80,6 +95,9 @@ public class GameLogic implements Runnable {
             q.update();
         
         for(Quadrato2 q : Instance.quadrato2)
+            q.update();
+        
+        for(QuadratoSpeciale q : Instance.quadratoSpeciale)
             q.update();
     }
     
@@ -97,6 +115,9 @@ public class GameLogic implements Runnable {
             q.draw(g);
         
         for(Quadrato2 q : Instance.quadrato2)
+            q.draw(g);
+        
+        for(QuadratoSpeciale q : Instance.quadratoSpeciale)
             q.draw(g);
     }
     

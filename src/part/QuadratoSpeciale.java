@@ -12,13 +12,13 @@ public class QuadratoSpeciale extends Quadrato {
 
     private double ySpeed;
     private int maxY,minY;
-    private boolean distruttibile;
+//    private boolean distruttibile;
     
     public QuadratoSpeciale(double pSpeed, double pY) {
         
         super(pSpeed);
-        //this.y = 70 + (Math.random() * 430);
-        this.y = pY;
+        this.y = 400;
+//        this.y = pY;
         this.square = new ImageIcon(getClass().getResource("/immagini/square2.png")).getImage();
         
         this.ySpeed = 4.00;
@@ -26,24 +26,26 @@ public class QuadratoSpeciale extends Quadrato {
         this.maxY = (int)(this.y + 70);
         this.minY = (int)(this.y - 70);
         
-        this.distruttibile = false;
+//        this.distruttibile = false;
         
     }
     
     @Override
     public void update() {
         
-        this.x -= this.speed;
-        
-        
-        if(this.y <= this.minY || this.y >= this.maxY - this.square.getHeight(null))
-            this.ySpeed *= -1;
-        this.y += this.ySpeed;
-        
-        
-        if(this.x <= 0 - this.square.getWidth(null)) {
-            this.distruttibile = true;
-        }
+        if(this.ready_to_spawn()) {
+            
+            this.x -= this.speed;
+
+            if(this.y <= this.minY || this.y >= this.maxY - this.square.getHeight(null))
+                this.ySpeed *= -1;
+            this.y += this.ySpeed;
+
+//            if(this.x <= 0 - this.square.getWidth(null)) {
+//                this.distruttibile = true;
+//            }
+            
+            
         
 //        if(this.y <=)
 //            this.ySpeed *= -1;
@@ -57,11 +59,12 @@ public class QuadratoSpeciale extends Quadrato {
             this.minY = (int)(this.y - 70);
         }
                 */
+        }
     }   
 
-    public boolean isDistruttibile() {
-        return distruttibile;
-    }
-    
+//    public boolean isDistruttibile() {
+//        return distruttibile;
+//    }
+//    
     
 }
